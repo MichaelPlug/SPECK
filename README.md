@@ -27,7 +27,7 @@ At this point your device will have a docker with a server containing a database
 ### Lunch the python script
 Check in CAKE project that `architecture/API/CAKEDataOwner.py` that the db server address and port are correctly entered.
 
-Make sure you have successfully started the CAKE project, that you have launched the API exposing the associated port.
+Make sure you have successfully started the CAKE project, that you have launched the API exposing the associated port and in `cake-network`.
 
 Open the speck.py file and correctly set the CAKE db and api addresses.
 
