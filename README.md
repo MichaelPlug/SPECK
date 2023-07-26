@@ -1,5 +1,9 @@
 # SPECK - Secrecy and Privacy Enhancer for Ciphered Knowledge
-This repository is an extension of the CAKE project, through a postgres db and a python scrypt it is possible to interact with the CAKE API and automate the ciphering of the messages
+This repository is an extension of the CAKE project, through a postgres db and a python scrypt it is possible to interact with the CAKE API and automate the ciphering of the messages.
+
+## CAKE Project
+- [CAKE Ethereum](https://github.com/apwbs/CAKE-Ethereum)
+- [CAKE Algorand](https://github.com/apwbs/CAKE-Algorand)
 
 ## Getting Started
 ### Prerequisites
@@ -21,6 +25,8 @@ At this point your device will have a docker with a server containing a database
 7. Insert as username `root` and as password `root`
 
 ### Lunch the python script
+Check in CAKE project that `architecture/API/CAKEDataOwner.py` that the db server address and port are correctly entered.
+
 Make sure you have successfully started the CAKE project, that you have launched the API exposing the associated port.
 
 Open the speck.py file and correctly set the CAKE db and api addresses.
