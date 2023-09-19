@@ -10,12 +10,12 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
     - "5430:5432"
-    network_mode: "cake-network"
+    network_mode: "speck-network"
     volumes:
     - ./data:/var/lib/postgresql/data
     # copy the sql script to create tables
-    #- ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_db.sql
-    #- ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_schema.sql
+    - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_db.sql
+    - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_schema.sql
     - ./sql/create_status_enum.sql:/docker-entrypoint-initdb.d/.sql
     - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
     - ./sql/create_functions.sql:/docker-entrypoint-initdb.d/.sql
@@ -29,4 +29,14 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - "5050:80"
-    network_mode: "cake-network"
+    network_mode: "speck-network"
+  speck-app:
+    container_name: speck_container
+    image: michaelplug/speck
+    restart: always
+    ports:
+      - "8080:8080"
+    network_mode: "speck-network"
+    depends_on:
+      - cake_db
+      - pgadmin
