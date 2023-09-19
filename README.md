@@ -20,14 +20,14 @@ At this point your device will have a docker with a server containing a database
 2. Insert your email and password (admin@admin.com and root)
 3. Right click on `Servers` and select `Register` -> `Server...`
 4. Insert a name for the server (es. cakedb) and go to the `Connection` tab
-5. Insert has host address the address of the docker container hosting the db in the network cake-network
+5. Insert has host address the address of the docker container hosting the db in the network speck-network
 6. Insert as port `5432`
 7. Insert as username `root` and as password `root`
 
 ### Lunch the python script
 Check in CAKE project that `architecture/API/CAKEDataOwner.py` that the db server address and port are correctly entered.
 
-Make sure you have successfully started the CAKE project, that you have launched the API exposing the associated port and in `cake-network`.
+Make sure you have successfully started the CAKE project, that you have launched the API exposing the associated port and in `speck-network`.
 
 Open the speck.py file and correctly set the CAKE db and api addresses.
 
